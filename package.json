@@ -1,8 +1,9 @@
 {
-  "name": "uk.sky.webcamviewer",
-  "description": "WebcamViewer",
+  "name": "uk.sky.unofficialTedTalks",
+  "description": "Unofficial Ted Talks",
   "dependencies": {
-    "wpe-lightning-sdk": "rdkcentral/Lightning-SDK"
+    "localCookie": "github:WebPlatformForEmbedded/localCookie",
+    "wpe-lightning-sdk": "github:rdkcentral/Lightning-SDK#feature/router"
   },
   "lint-staged": {
     "*.js": [
@@ -12,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      
     }
   },
   "devDependencies": {
