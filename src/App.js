@@ -35,9 +35,9 @@ export default class App extends Lightning.Component {
           type: Menu,
         },
       },
-      Splash: {
-        type: Splash,
-      },
+      // Splash: {
+      //   type: Splash,
+      // },
       // NotFound: {
       //   type: NotFound
       // }
@@ -79,6 +79,16 @@ export default class App extends Lightning.Component {
 
   _init() {
     // this.tag('Splash').alpha = 1;
+  }
+
+  // Needed for routes to know where you put the pages!
+  get pages() {
+    return this.tag('Pages')
+  }
+
+  // Needed for routes to know where you put the widgets!
+  get widgets() {
+    return this.tag('Widgets')
   }
 
   _getFocused() {

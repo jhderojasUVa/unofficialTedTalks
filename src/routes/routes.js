@@ -1,13 +1,13 @@
 import { Router } from 'wpe-lightning-sdk'
 
-import { Splash, Main, NotFound } from '../pages'
+import { Splash, Main, Search, Result, NotFound } from '../pages'
 
 export default () => {
   Router.root('splash', Splash)
-  Router.root('home', Main)
-  Router.root('search', Search)
-  Router.root('search/speaker/:itemSearch', Results)
-  Router.root('search/description/:itemSearch', Results)
+  Router.route('home', Main)
+  Router.route('search', Search)
+  Router.route('search/speaker/:itemSearch', Result)
+  Router.route('search/description/:itemSearch', Result)
 
   Router.route('*', NotFound)
 

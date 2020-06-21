@@ -15,12 +15,11 @@ export default class Splash extends Lightning.Component {
         },
       },
       AudioPlayer: {
-        // type: MediaPlayer
+        type: MediaPlayer,
         w: 10,
         h: 10,
         x: 0,
         y: 0,
-        type: AudioPlayer,
       },
       Logo: {
         x: w => w / 2 - 430 / 2,

@@ -1,14 +1,11 @@
 import { Lightning, MediaPlayer } from 'wpe-lightning-sdk'
 
-const giphyCat = 'https://media.giphy.com/media/VxbvpfaTTo3le/giphy.mp4'
+const giphyCat = 'https://media.giphy.com/media/WPWrU2AeK3aV2/giphy.mp4'
 
 export default class NotFound extends Lightning.Component {
   static _template() {
     return {
       Media: {
-        // https://media.giphy.com/media/VxbvpfaTTo3le/giphy.mp4
-        // https://media.giphy.com/media/13tks6KkV5Crzq/giphy.mp4
-        // https://media.giphy.com/media/WPWrU2AeK3aV2/giphy.mp4
         x: 0,
         y: 0,
         w: 1920,
@@ -47,26 +44,14 @@ export default class NotFound extends Lightning.Component {
   }
 
   $mediaplayerCanplay() {
-    console.log('can play')
     this.tag('Media').playPause()
   }
 
   _active() {
-    // this.tag('Media').updateSettings({consumer: this});
     this.tag('Media').open(giphyCat)
   }
 
-  _handleEnter() {
-    console.log('gsdfgsdgdsgdsfg')
-    this.tag('Media').playPause()
-  }
-
   _focus() {
-    console.log('dasdasds')
     this.tag('Media').playPause()
-  }
-
-  _getFocused() {
-    return this
   }
 }
