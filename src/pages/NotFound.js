@@ -40,18 +40,18 @@ export default class NotFound extends Lightning.Component {
 
   _init() {
     console.log('NotFound init')
-    this.tag('Media').updateSettings({ consumer: this })
+    // this.tag('Media').updateSettings({ consumer: this })
   }
 
   $mediaplayerCanplay() {
-    this.tag('Media').playPause()
+    // this.tag('Media').playPause()
   }
 
   _active() {
-    this.tag('Media').open(giphyCat)
+    // this.tag('Media').open(giphyCat)
   }
 
   _focus() {
-    this.tag('Media').playPause()
+    // this.tag('Media').playPause()
   }
 }

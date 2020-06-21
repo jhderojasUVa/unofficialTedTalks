@@ -20,6 +20,15 @@ export default class App extends Lightning.Component {
 
   static _template() {
     return {
+      Background: {
+        x: 0,
+        y: 0,
+        w: 1920,
+        h: 1080,
+        colorTop: 0xcc222222,
+        colorBottom: 0xff555555,
+        rect: true,
+      },
       Pages: {
         forceZIndexContext: true,
       },
@@ -35,12 +44,6 @@ export default class App extends Lightning.Component {
           type: Menu,
         },
       },
-      // Splash: {
-      //   type: Splash,
-      // },
-      // NotFound: {
-      //   type: NotFound
-      // }
     }
   }
 

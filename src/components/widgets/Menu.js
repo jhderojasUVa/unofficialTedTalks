@@ -21,14 +21,16 @@ export default class Menu extends Lightning.Component {
       return {
         index,
         data: element,
-        Text: {
-          text: {
-            text: label,
-          },
+        text: {
+          text: element.label,
         },
       }
     })
   }
 
-  _init() {}
+  _focus() {}
+
+  _init() {
+    console.log('Menu')
+  }
 }

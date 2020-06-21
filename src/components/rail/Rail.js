@@ -22,29 +22,25 @@ export default class Rail extends Lightning.Component {
   }
 
   set data(value) {
-    this._flex.children = value.mal((element, index) => {
+    this._flex.children = value.map((element, index) => {
       return {
-        ...element,
+        y: 400 * index,
+        data: element,
         index,
         type: RailItems,
       }
     })
   }
 
-  _init() {
+  _build() {
     this._index = 0
 
     this._flex = this.tag('Flex')
   }
 
   _handleUp() {
-    if ((this._index = 0)) {
-      // Goes to the upper menu
-      this._focusWidgets()
-    } else {
-      this._index--
-      this.setIndex(this._index)
-    }
+    this._index = this._index > 0 ? this._index-- : 0
+    this.setIndex(this._index)
   }
 
   _handleDown() {
@@ -57,5 +53,13 @@ export default class Rail extends Lightning.Component {
 
   setIndex(index) {}
 
+  _focus() {
+    console.log('I got the power')
+  }
+
   _focusWidgets() {}
+
+  _getFocused() {
+    return this._flex
+  }
 }

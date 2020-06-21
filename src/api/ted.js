@@ -11,13 +11,9 @@ const url =
 export const getNewestTalks = async () => {
   const returnedData = await get(url)
 
-  const {
-    data: [],
-  } = returnedData.items
-
   // Everything goes in the correct way
-  if (data.length > 0) {
-    return data.map(element => {
+  if (returnedData.items.length > 0) {
+    return returnedData.items.map(element => {
       return new NewestTalks(element)
     })
   }

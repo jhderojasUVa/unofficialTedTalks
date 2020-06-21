@@ -1,6 +1,6 @@
 {
-  "name": "uk.sky.XXXXXX",
-  "description": "Change me!",
+  "name": "uk.jhderojas.unofficialTedTalks",
+  "description": "Unoficial Ted Talks, see the latest Ted Talks in your TV and search for your favorites",
   "dependencies": {
     "localCookie": "github:WebPlatformForEmbedded/localCookie",
     "wpe-lightning-sdk": "github:rdkcentral/Lightning-SDK#feature/router"
@@ -13,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      
+      "pre-commit": "lint-staged"
     }
   },
   "devDependencies": {

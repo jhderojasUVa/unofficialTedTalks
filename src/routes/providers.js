@@ -8,7 +8,7 @@ export default () => {
   })
 
   Router.before(
-    'home',
+    'main',
     async ({ page }) => {
       page.data = await getNewestTalks()
     },
