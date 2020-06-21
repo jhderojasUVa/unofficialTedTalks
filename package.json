@@ -1,6 +1,6 @@
 {
-  "name": "uk.sky.unofficialTedTalks",
-  "description": "Unofficial Ted Talks",
+  "name": "uk.sky.XXXXXX",
+  "description": "Change me!",
   "dependencies": {
     "localCookie": "github:WebPlatformForEmbedded/localCookie",
     "wpe-lightning-sdk": "github:rdkcentral/Lightning-SDK#feature/router"

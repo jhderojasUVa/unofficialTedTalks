@@ -1,4 +1,4 @@
-import { Lightning, Utils, MediaPlayer, AudioPlayer } from 'wpe-lightning-sdk'
+import { Lightning, Utils, MediaPlayer, Router } from 'wpe-lightning-sdk'
 
 const timingFunction = 'cubic-bezier(0.20, 1.00, 0.80, 1.00)'
 
@@ -16,6 +16,10 @@ export default class Splash extends Lightning.Component {
       },
       AudioPlayer: {
         // type: MediaPlayer
+        w: 10,
+        h: 10,
+        x: 0,
+        y: 0,
         type: AudioPlayer,
       },
       Logo: {
@@ -72,15 +76,24 @@ export default class Splash extends Lightning.Component {
     this._audioplayer.updateSettings({ consumer: this })
 
     this._introSound = Utils.asset('sound/intro.mp3')
+    // this._audioplayer.open(this._introSound)
   }
 
   _active() {
     this._logo.setSmooth('scale', 1)
     this._logo.setSmooth('alpha', 1)
-    this._audioplayer.open(this._introSound)
+    // Navigate after 3 seconds to main
+    setTimeout(() => {
+      Router.navigate('Main')
+    }, 3000)
   }
 
   _deactive() {}
 
-  $mediaplayerLoadedData() {}
+  $mediaplayerEnded() {
+    // The intro has finished go to main (after 500 miliseconds)
+    setTimeout(() => {
+      Router.navigate('Main')
+    }, 500)
+  }
 }

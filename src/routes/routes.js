@@ -1,14 +1,13 @@
 import { Router } from 'wpe-lightning-sdk'
 
-import { Splash, NotFound } from '../pages'
+import { Splash, Main, NotFound } from '../pages'
 
 export default () => {
   Router.root('splash', Splash)
-  // Router.root('home', Main);
-  // Router.route('home/browse/movies', Main);
-  // Router.route('home/browse/series', Main);
-  // Router.route('details/:itemType/:itemId', Details);
-  // Router.route('details/:itemType/:itemId/play', Player);
+  Router.root('home', Main)
+  Router.root('search', Search)
+  Router.root('search/speaker/:itemSearch', Results)
+  Router.root('search/description/:itemSearch', Results)
 
   Router.route('*', NotFound)
 
